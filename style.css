@@ -164,6 +164,8 @@ margin: 20px auto;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 gap: 20px;
+width: 800px;
+
 
 
 }
@@ -194,21 +196,35 @@ gap: 20px;
     border-radius: 20px;
     text-align: center;
 }
-.modal_ovarlay{
-    background-color: rgba(0, 0, 0, 0.699);
+.modal_overlay{
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
+    opacity: 0;
+    visibility: hidden;
 }
 .modal{
     background-color: white;
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     margin: 5vh auto;
+    position: relative;
 }
+.modal .close_modal span{
+    color: black;
+    right: 8px;
+    top: 7px;
+    cursor: pointer;
+    position: absolute;
+}
+/* --- moadla overlay active ---*/
 
-
+.modal_overlay.active{
+opacity: 1;
+visibility: visible;
+}
 
 
 
